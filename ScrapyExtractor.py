@@ -1,7 +1,7 @@
 import requests as Resti
 from ExtractType import AddToTable
 from bs4 import BeautifulSoup as bs
-_url = "https://www.namecheap.com/blog/"#burada sadece en son çekilen url koyulmuştur burası dinamik olarak site adı ile değiştirlerek veri elde edildi.
+_url = "https://www.namecheap.com/blog/"#burası url tutucu.burda şuan sadece en son çekilen url duruyor ama burası verisi çekilecek website'ye göre değiştirildi.
 try:
     data = Resti.get(_url,timeout=250)
     content =  data.content
@@ -15,4 +15,5 @@ try:
             
 except BaseException as err:
     print("Something wrong about it:",err.args)
+
 
