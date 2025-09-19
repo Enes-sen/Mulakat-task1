@@ -14,4 +14,3 @@ def AddToTable(title,author,_url):
     cur.execute("INSERT INTO ExtractModel (title, author,_url) VALUES (?, ?,?)", (title, author,_url))
     Con.commit()
     Con.close()
-
