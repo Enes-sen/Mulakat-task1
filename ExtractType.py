@@ -9,8 +9,9 @@ def inittilazer():
     
 def AddToTable(title,author,_url):
     inittilazer()
-    Con = Sq3.connect("namecheapBlog.db")
+    Con = Sq3.connect("namecheapBlog.db")#db ismi web site ismine göre değiştirerek elde ettim dbleri.
     cur = Con.cursor()
     cur.execute("INSERT INTO ExtractModel (title, author,_url) VALUES (?, ?,?)", (title, author,_url))
     Con.commit()
     Con.close()
+
